@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./styles.css";
-import InputTodo from "./components/InputTodo";
-import InCompleteTodos from "./components/InCompleteTodos";
-import CompleteTodos from "./components/CompleteTodos";
+import { InputTodo } from "./components/InputTodo";
+import { InCompleteTodos } from "./components/InCompleteTodos";
+import { CompleteTodos } from "./components/CompleteTodos";
 
 export const App = () => {
   const [todoText, setTodoText] = useState("");
-  const [incompleteTodos, setIncompleteTodos] = useState(["aaaaa", "iiiii"]);
-  const [completeTodos, setCompleteTodos] = useState(["uuuuu"]);
+  const [incompleteTodos, setIncompleteTodos] = useState([]);
+  const [completeTodos, setCompleteTodos] = useState([]);
 
   const onChangeTodoText = (event) => setTodoText(event.target.value);
 
